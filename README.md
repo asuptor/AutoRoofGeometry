@@ -12,7 +12,8 @@ This repo provides a custom Grasshopper script (used within Rhino3d software) to
 3. For gable roofs, both with four and greater than four vertices, the process is very similar, though we first extend the approximated ridge to the building outline before transposing upward. Then, for gable roofs with four vertices we use Grasshopper surface tools to directly obtain the gable slope shapes.
 4. For gable roofs with greater than four vertices, the complex shape is again approximated using the "Patch Surface" tool within Grasshopper.
 
-<img width="535" height="352" alt="image" src="https://github.com/user-attachments/assets/77b77158-9fc8-4b1a-b724-eae96e0ccbba" />
+<img width="823" height="540" alt="image" src="https://github.com/user-attachments/assets/e9fb073d-7f6f-45ff-b814-ff270840a763" />
+
 
 The tool was used within the above-referenced article primarily to derive roof surface areas for retrofit quantity estimation, for incorporation in a life cycle costing model. Because of this focus on retrofit costs, we note that the triangle-shaped ends of gable roofs are actually part of the exterior wall, so these must be separated from the gable roof calculation, as there are different unit costs associated with roof and wall retrofits. For the 4-vertex gable roofs, the triangle-shaped ends are not included in the roof area, and these areas are separately added to wall area calculations during post-processing. For the gable roofs with greater than 4 vertices, we approximated the triangle-shaped ends using GIS data and subtracted these from the gable roof areas during post-processing.
 
