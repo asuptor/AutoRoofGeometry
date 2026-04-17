@@ -10,7 +10,7 @@ This repo provides a custom Grasshopper script (used within Rhino3d software) to
    b. For the non-square hip roofs with four vertices, a roof ridge is approximated using the Dragonfly tool “straight skeleton”, producing a tree-branch-like polyline within each footprint. This tool follows the algorithm of Felkel & Obrdrzalek (1998) and is intended to create thermal zones for energy models, though we observe that the central portion of the straight skeleton approximates a building’s roof ridgeline. Accordingly, our script isolates the central polyline by detecting line segments connected to the building footprint, as depicted below. The ridge polyline is transposed upward using the eaves-to-peak height from GIS/LiDAR data, and the four triangle shapes are created directly using Grasshopper surface tools.
 2. For hip roofs with greater than four vertices, the process is nearly identical as (1b) above, except that the complex roof shapes are approximated using the "Patch Surface" tool within Grasshopper.
 3. For gable roofs, both with four and greater than four vertices, the process is very similar, though we first extend the approximated ridge to the building outline before transposing upward. Then, for gable roofs with four vertices we use Grasshopper surface tools to directly obtain the gable slope shapes.
-4. For gable roofs with greater than four vertices, the complex shape is again approximated using the "Patch Surface" tool within Grasshopper. <br>
+4. For gable roofs with greater than four vertices, the complex shape is again approximated using the "Patch Surface" tool within Grasshopper. <br><br>
 
 <img width="823" height="540" alt="image" src="https://github.com/user-attachments/assets/e9fb073d-7f6f-45ff-b814-ff270840a763" /><br>
 
@@ -22,5 +22,5 @@ The tool could be further developed to incorporate the derived 3D roof geometrie
 
 Requirements:
 1. [Rhino software](https://www.rhino3d.com/)
-2. Urbano plug-in](https://urbano.io) - used to import SHP files with geometry and metadata from GIS.
+2. [Urbano plug-in](https://urbano.io) - used to import SHP files with geometry and metadata from GIS.
 3. [Dragonfly plug-in](https://www.ladybug.tools/dragonfly.html) - used for the "Straight Skeleton" tool to approximate roof ridgelines.
